@@ -2,6 +2,7 @@
   name: apcupsd
   version: 1
   uuid: apcupsd1
+  minimum_rancher_version: v0.46.0
   questions:
     - variable: APC_HOST
       label: IP address of APC UPS
@@ -21,7 +22,7 @@
       type: int
       required: true
       default: 3
-      
+
     - variable: TARGET
       label: Target endpoint used for HTTP POST request
       description: |
