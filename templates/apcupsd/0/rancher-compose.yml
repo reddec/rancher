@@ -1,4 +1,4 @@
-.catalog
+.catalog:
   name: apcupsd
   version: 1
   uuid: apcupsd1
