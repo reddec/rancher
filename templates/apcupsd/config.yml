@@ -1,0 +1,8 @@
+name: APC UPS status collector
+description: |
+  Collect status by SNMP protocol from APC UPS and make POST request to specified URL.
+  Support direct HTTP POST or service descovery from Consul.
+version: 1.0.0
+category: utility
+maintainer: dev@baryshnikov.net
+license: MIT

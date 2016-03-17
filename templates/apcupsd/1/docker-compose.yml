@@ -1,0 +1,15 @@
+collector:
+  build: ./apcupsd
+  environment:
+    APC_NAME: APC
+    APC_HOST: "$APC_HOST"
+    APC_PORT: "$APC_PORT"
+    INTERVAL: "$INTERVAL"
+
+poster:
+  build: ./poster
+  volumes_from:
+    - collector
+  environment:
+    TARGET: "$TARGET"
+    CONSUL: "$CONSUL"

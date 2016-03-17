@@ -1,0 +1,38 @@
+.catalog
+  name: apcupsd
+  version: 1
+  uuid: apcupsd1
+  questions:
+    - variable: APC_HOST
+      label: IP address of APC UPS
+      description: |
+        Remote address of APC UPS which will be used for SNMP connection
+      required: true
+      type: string
+    - variable: APC_PORT
+      label: SNMP port of APC UPS
+      description: Remote UDP port used for SNMP connection
+      type: int
+      required: true
+      default: 161
+    - variable: INTERVAL
+      label: Interval in seconds between checks
+      description: Check each N seconds for status of APC UPS over SNMP
+      type: int
+      required: true
+      default: 3
+      
+    - variable: TARGET
+      label: Target endpoint used for HTTP POST request
+      description: |
+        Without Consul this param used as url of remote server which accepts POST request.
+        With Consul this param MUST contains path only. Address and port will be discovered automatically
+      required: true
+      type: string
+    - variable: CONSUL
+      label: Consul URL to service
+      description: |
+        If this param is not empty, first service returned by this url will be used.
+        ex: http://192.168.1.2:8500/v1/catalog/service/statsdb
+      type: string
+      required: false
