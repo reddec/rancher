@@ -26,14 +26,6 @@
     - variable: TARGET
       label: Target endpoint used for HTTP POST request
       description: |
-        Without Consul this param used as url of remote server which accepts POST request.
-        With Consul this param MUST contains path only. Address and port will be discovered automatically
+        This param used as url of remote server which accepts POST request.
       required: true
       type: string
-    - variable: CONSUL
-      label: Consul URL to service
-      description: |
-        If this param is not empty, first service returned by this url will be used.
-        ex: http://192.168.1.2:8500/v1/catalog/service/statsdb
-      type: string
-      required: false
