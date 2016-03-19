@@ -1,7 +1,5 @@
 poster:
   image: reddec/apcsrv
-  volumes_from:
-    - collector
   environment:
     TARGET: "$TARGET"
     APC_NAME: "$NAME"
