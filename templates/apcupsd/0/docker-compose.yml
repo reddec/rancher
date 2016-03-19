@@ -4,7 +4,7 @@ poster:
     - collector
   environment:
     TARGET: "$TARGET"
-    APC_NAME: APC
+    APC_NAME: "$NAME"
     APC_HOST: "$APC_HOST"
     APC_PORT: "$APC_PORT"
     INTERVAL: "$INTERVAL"

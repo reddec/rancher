@@ -10,6 +10,18 @@
         Remote address of APC UPS which will be used for SNMP connection
       required: true
       type: string
+    - variable: TARGET
+      label: Target endpoint used for HTTP POST request
+      description: |
+        This param used as url of remote server which accepts POST request.
+      required: true
+      type: string
+    - variable: NAME
+      label: Unique name for APC UPS
+      description: |
+        APC UPS unique name may be used as ID for later
+      required: false
+      type: string
     - variable: APC_PORT
       label: SNMP port of APC UPS
       description: Remote UDP port used for SNMP connection
@@ -22,10 +34,3 @@
       type: int
       required: true
       default: 3
-
-    - variable: TARGET
-      label: Target endpoint used for HTTP POST request
-      description: |
-        This param used as url of remote server which accepts POST request.
-      required: true
-      type: string
